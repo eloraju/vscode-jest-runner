@@ -150,7 +150,7 @@ export class JestRunner {
 
   private buildJestCommand(filePath: string, testName?: string, options?: string[]): string {
     const args = this.buildJestArgs(filePath, testName, true, options);
-    return `${this.config.jestCommand} ${args.join(' ')}`;
+    return `${this.config.envs} ${this.config.jestCommand} ${args.join(' ')}`;
   }
 
   private buildJestArgs(filePath: string, testName: string, withQuotes: boolean, options: string[] = []): string[] {
