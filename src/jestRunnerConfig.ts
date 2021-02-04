@@ -23,7 +23,7 @@ export class JestRunnerConfig {
     return `node ${quote(this.jestBinPath)}`;
   }
 
-  public get environmentVariables(): string {
+  public get envs(): string {
       const envs: string[] = vscode.workspace.getConfiguration().get('jestrunner.environmentVariables');
       return envs.join(' ')
   }
